@@ -21,27 +21,6 @@ const comments = [
 		"Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC.",
 	  social: ["facebook", "twitter"],
 	},
-	{
-		id: 1,
-		user: "karl rock",
-		content:
-		  "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has",
-		social: ["facebook", "twitter"],
-	  },
-	  {
-		id: 2,
-		user: "jane doe",
-		content:
-		  "Lorem Ipsum is simply dummy text of the printing and typesetting industry. It has survived not only five centuries, but also the leap into electronic typesetting.",
-		social: ["facebook", "twitter"],
-	  },
-	  {
-		id: 3,
-		user: "john smith",
-		content:
-		  "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC.",
-		social: ["facebook", "twitter"],
-	  },
 ];
 
 function UserComments() {
