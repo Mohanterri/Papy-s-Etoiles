@@ -8,7 +8,7 @@ const MidPart = () => {
 				<p id="A_name">Persévérance</p>
 				<p>La voie de la jeunesse</p>
 				<div className="author_desc">
-				   <p></p>
+				   <p>Description de l&apos;artiste</p>
 				</div>
                  <div className="buttons">
                    <button><i className='bx bx-play'></i></button>

@@ -27,11 +27,11 @@ const Navbar = () => {
         </a>
 
         <div className={`nav_content ${isTopNavActive ? "active_top_navbar" : ""}`}>
-          <li><a href="#">Home</a></li>
-          <li><a href="#top_tracks">Tracks</a></li>
-          <li><a href="#user_comments">Comments</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li><a href="#">Faire un don</a></li>
+          <li onClick={toggleTopNav}><a href="#">Home</a></li>
+          <li onClick={toggleTopNav}><a href="#top_tracks">Tracks</a></li>
+          <li onClick={toggleTopNav}><a href="#user_comments">Comments</a></li>
+          <li onClick={toggleTopNav}><a href="#contact">Contact</a></li>
+          <li onClick={toggleTopNav}><a href="#">Faire un don</a></li>
         </div>
 
         <a onClick={toggleSideNav} id="menu_btn">

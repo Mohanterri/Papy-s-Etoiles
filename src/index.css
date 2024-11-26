@@ -57,13 +57,14 @@ body{
 }
 
 .mid_part img {
-    height: 190px;
+    height: 210px;
     max-width: 100%;
     border-radius: 10px; /* Pour un design plus esthétique */
 }
 
 /* Description */
 .description {
+	width: 85%;
     padding: 10px;
     text-align: center;
 }
@@ -143,6 +144,10 @@ body{
         text-align: left;
         max-width: 50%; /* Description occupe la moitié de la largeur */
     }
+
+	.description .buttons {
+		justify-content: left;
+	}
 
     .bay-section {
         align-self: flex-start;
