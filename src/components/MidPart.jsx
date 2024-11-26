@@ -52,9 +52,11 @@ const MidPart = () => {
 
       <div className="description">
         <p id="A_name">Persévérance</p>
-        <p>La voie de la jeunesse</p>
+        <p id='sub-title'>La voie de la jeunesse</p>
         <div className="author_desc">
-          <p>Description de l&apos;artiste</p>
+          <p>Papy&apos;s 5 Etoiles est un artiste passionné, fusionnant soul et musique urbaine pour créer une atmosphère musicale 
+			captivante. Son univers allie rythmes entraînants, mélodies profondes et paroles touchantes, résonnant profondément 
+			avec l&apos;âme.</p>
         </div>
         <div className="buttons">
           <button><i className="bx bx-play"></i></button>
