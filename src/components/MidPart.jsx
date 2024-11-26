@@ -16,6 +16,9 @@ const MidPart = () => {
 				   <button><i className='bx bx-share-alt'></i></button>
 				   <button><i className='bx bx-bookmark-alt'></i></button>
                  </div>
+			</div>
+
+			<div className="bay-section">
 				<button id="bay_album"><i className='bx bxs-cart-add'></i> Acheter</button>
 			</div>
 			
