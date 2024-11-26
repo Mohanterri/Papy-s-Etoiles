@@ -1,3 +1,5 @@
+import InstallPrompt from './functions/InstallPrompt';
+
 import Header from "./components/Header"
 import Navbar from "./components/NavBar"
 import MidPart from "./components/MidPart"
@@ -11,6 +13,7 @@ function App() {
 
   return (
     <>
+      <InstallPrompt />
       <Header />
       <Navbar />
       <MidPart />
