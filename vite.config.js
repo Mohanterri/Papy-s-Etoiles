@@ -12,7 +12,10 @@ export default defineConfig({
         name: 'Papy\'s 5 Etoiles',
         short_name: 'Papy\'s 5 Etoiles',
         description: 'My Awesome App description',
-        theme_color: '#000000',
+        start_url: "/",
+        display: "standalone", // "standalone" ou "fullscreen" pour une expérience d'application native
+        background_color: "#000000",
+        theme_color: "#000000",
         icons: [
           {
             src: 'android-chrome-192x192.png',
