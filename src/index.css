@@ -175,9 +175,9 @@ body{
 /*navbar*/
 .navbar{
 	position: relative;
+	width: 100%;
 	z-index: 100;
 	height: 55px;
-	width: 100%;
 	padding: 0 15px;
 	display: flex;
 	align-items: center;
@@ -187,15 +187,17 @@ body{
 .navbar #logo{
 	color: #fff;
 	font-size: 1.8em;
+	width: 60%;
 	text-decoration: none;
 	cursor: pointer;
-	margin-left: 4em;
+	align-self: center;;
+	margin-left: 2em;
 	font-family: cursive;
 }
 .nav_content{
     display: flex;
     justify-content: space-between;
-    width: 50%;
+    width: 40%;
 }
 .nav_content li{
 	list-style: none;
