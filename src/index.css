@@ -70,6 +70,27 @@ body{
 	background-color: #0056b3;
   }
   
+/* Style pour le compte à rebours */
+.countdown {
+	color: #ffffff; /* Tomate pour attirer l'attention */
+}
+
+.countdown h2{
+	color: red;
+	margin-top: 5px;
+	text-align: center;
+	font-size: 25px;
+}
+  
+.countdown p {
+	padding: 10px;
+	border-radius: 10px;
+	font-weight: bold;
+	font-size: 16px;
+	text-align: center;
+	font-family: 'Arial', sans-serif;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
 
 /* Style de base */
 .mid_part {
