@@ -1,6 +1,7 @@
 import { useState } from "react";
+import { useAudiosManagement } from '../models/Audios'
 
-const tracks = [
+const trackss = [
     {
       id: 1,
       title: "Dev ideas favourite song",
@@ -25,6 +26,7 @@ const tracks = [
 function TopTracks() {
 
     const [activeTrack, setActiveTrack] = useState(null);
+    const { data: tracks } = useAudiosManagement();
 
     // Gestion de la lecture/pause
     const togglePlayPause = (track) => {

@@ -68,11 +68,13 @@ const MidPart = () => {
 
       <div className="bay-section">
         <div className="countdown">
-			<h2>
-				Disponible dans :
-			</h2>
 			{countdownText === "Précommander" && (
-				<p>{countdown.days} jours {countdown.hours} heures : {countdown.minutes} minutes : {countdown.seconds} secondes</p>
+				<>
+					<h2>
+						Disponible dans :
+					</h2>
+					<p>{countdown.days} jours {countdown.hours} heures : {countdown.minutes} minutes : {countdown.seconds} secondes</p>
+				</>
 			)}
         </div>
 		<br></br>

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { db } from "./Configs";
+import { db } from "./Config";
 import { 
     collection, 
     getDocs, 

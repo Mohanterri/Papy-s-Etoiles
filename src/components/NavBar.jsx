@@ -19,7 +19,7 @@ const Navbar = () => {
 
       <div className="navbar">
         <a href="#" id="logo">
-          <i className="bx bxs-bar-chart-alt-2"></i>&nbsp;Papy&apos;s 5 Etoile
+          <i className="bx bxs-bar-chart-alt-2"></i>&nbsp;Papy&apos;s 5 Etoiles
         </a>
 
         <a onClick={toggleTopNav} id="responsive_menu">
