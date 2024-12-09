@@ -11,7 +11,7 @@ export const useAudiosManagement = () => {
   useEffect(() => {
     const unsubscribe = getSynch();
     return () => unsubscribe();
-  }, [getSynch]);
+  }, []);
 
   /**
    * Add a new audio

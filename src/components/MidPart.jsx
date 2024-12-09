@@ -1,9 +1,21 @@
 import { useState, useEffect } from 'react';
+import Popup from './modal';
 
 const MidPart = () => {
   // Date cible pour le compte à rebours (exemple : 31 décembre 2024 à 23:59:59)
-  const targetDate = new Date("2024-12-31T23:59:59").getTime();
+  const targetDate = new Date("2025-01-22T23:59:59").getTime();
   const [countdownText, setCountdownText] = useState("Précommander");
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => {
+    console.log("Opening modal");
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    console.log("Closing modal");
+    setIsModalOpen(false);
+  };
   
   const [countdown, setCountdown] = useState({
     days: 0,
@@ -47,42 +59,48 @@ const MidPart = () => {
   }, [targetDate]);
 
   return (
-    <div className="mid_part">
-      <img src="/img.jpg" alt="Image" />
+    <>
+      <Popup isOpen={isModalOpen} onClose={closeModal}>
+        <p>This is a reusable modal!</p>
+      </Popup>
 
-      <div className="description">
-        <p id="A_name">Persévérance</p>
-        <p id='sub-title'>La voie de la jeunesse</p>
-        <div className="author_desc">
-          <p>Papy&apos;s 5 Etoiles est un artiste passionné, fusionnant soul et musique urbaine pour créer une atmosphère musicale 
-			captivante. Son univers allie rythmes entraînants, mélodies profondes et paroles touchantes, résonnant profondément 
-			avec l&apos;âme.</p>
+      <div className="mid_part">
+        <img src="/img.jpg" alt="Image" />
+
+        <div className="description">
+          <p id="A_name">Persévérance</p>
+          <p id='sub-title'>La voie de la jeunesse</p>
+          <div className="author_desc">
+            <p>Papy&apos;s 5 Etoiles est un artiste passionné, fusionnant soul et musique urbaine pour créer une atmosphère musicale 
+              captivante. Son univers allie rythmes entraînants, mélodies profondes et paroles touchantes, résonnant profondément 
+              avec l&apos;âme.</p>
+          </div>
+          <div className="buttons">
+            <button><i className="bx bx-play"></i></button>
+            <button><i className="bx bxs-like"></i></button>
+            <button><i className="bx bx-share-alt"></i></button>
+            <button><i className="bx bx-bookmark-alt"></i></button>
+          </div>
         </div>
-        <div className="buttons">
-          <button><i className="bx bx-play"></i></button>
-          <button><i className="bx bxs-like"></i></button>
-          <button><i className="bx bx-share-alt"></i></button>
-          <button><i className="bx bx-bookmark-alt"></i></button>
+
+        <div className="bay-section">
+          <div className="countdown">
+            {countdownText === "Précommander" && (
+              <>
+                <h2>
+                  Disponible dans :
+                </h2>
+                <p>{countdown.days} jours {countdown.hours} heures : {countdown.minutes} minutes : {countdown.seconds} secondes</p>
+              </>
+            )}
+          </div>
+          <br></br>
+          <button id="bay_album" onClick={openModal}>
+            <i className="bx bxs-cart-add"></i> {countdownText}
+          </button>
         </div>
       </div>
-
-      <div className="bay-section">
-        <div className="countdown">
-			{countdownText === "Précommander" && (
-				<>
-					<h2>
-						Disponible dans :
-					</h2>
-					<p>{countdown.days} jours {countdown.hours} heures : {countdown.minutes} minutes : {countdown.seconds} secondes</p>
-				</>
-			)}
-        </div>
-		<br></br>
-        <button id="bay_album">
-          <i className="bx bxs-cart-add"></i> {countdownText}
-        </button>
-      </div>
-    </div>
+    </>
   );
 };
 

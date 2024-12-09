@@ -1,32 +1,11 @@
 import { useState } from "react";
-import { useAudiosManagement } from '../models/Audios'
-
-const trackss = [
-    {
-      id: 1,
-      title: "Dev ideas favourite song",
-      artist: "Devideas",
-      src: "songs/2.mp3",
-      img: "/track_soung.jpg",
-      downloads: 2000,
-      isNew: true,
-    },
-    {
-      id: 2,
-      title: "Another song",
-      artist: "Devideas",
-      src: "songs/1.mp3",
-      img: "/track_soung.jpg",
-      downloads: 1500,
-      isNew: false,
-    },
-    // Ajoutez plus de pistes ici
-];
+//import { useAudiosManagement } from '../models/Audios'
+import tracks from "./data/Tracks";
 
 function TopTracks() {
 
     const [activeTrack, setActiveTrack] = useState(null);
-    const { data: tracks } = useAudiosManagement();
+    //const { data: tracks } = useAudiosManagement();
 
     // Gestion de la lecture/pause
     const togglePlayPause = (track) => {

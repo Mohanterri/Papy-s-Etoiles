@@ -6,16 +6,18 @@ function Contact() {
                 <p id="heading"><i className='mingcute--contacts-fill' ></i>&nbsp;&nbsp;Contact et informations</p>
                 <div className="row">
                     <div className="col contact-info">
-                        <h3>Nos Informations</h3>
+                        <h1>Nos Informations</h1>
+                        <br></br>
                         <ul>
-                        <li><strong>Adresse:</strong> 123 Rue Exemple, Ville, Pays</li>
-                        <li><strong>Email:</strong> contact@exemple.com</li>
-                        <li><strong>Téléphone:</strong> +123 456 789</li>
+                            <li><strong>Adresse:</strong> Plateau, Garoua, Cameroun</li>
+                            <li><strong>Email:</strong> lkkhteammusik@gmail.com</li>
+                            <li><strong>Téléphone:</strong> (+237) 698 852 201 / 652 707 581</li>
                         </ul>
                     </div>
 
                     <div className="col contact-form">
-                        <h3>Envoyez-nous un message</h3>
+                        <h1>Envoyez-nous un message</h1>
+                        <br></br>
                         <form action="#" method="post">
                             <label htmlFor="name">Nom:</label>
                             <input type="text" id="name" name="name" placeholder="Votre nom" required />
