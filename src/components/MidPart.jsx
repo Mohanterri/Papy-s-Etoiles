@@ -1,4 +1,6 @@
 import { useState, useEffect } from 'react';
+import Swal from 'sweetalert2'
+import 'sweetalert2/src/sweetalert2.scss'
 import Popup from './modal';
 import 'boxicons'
 
@@ -9,8 +11,32 @@ const MidPart = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const openModal = () => {
-    console.log("Opening modal");
-    setIsModalOpen(true);
+    Swal.fire({
+      title: "Donnations",
+      input: "text",
+      inputAttributes: {
+        autocapitalize: "off",
+        placeholder: "Votre nom"
+      },
+      showCancelButton: true,
+      confirmButtonText: "Valider",
+      showLoaderOnConfirm: true,
+      preConfirm: async (login) => {
+        try {
+          console.log(login);
+        } catch (error) {
+          Swal.showValidationMessage(`Request failed: ${error}`);
+        }
+      },
+      allowOutsideClick: () => !Swal.isLoading()
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire({
+          title: `${result.value.login}'s avatar`,
+          imageUrl: result.value.avatar_url
+        });
+      }
+    });
   };
 
   const closeModal = () => {

@@ -98,8 +98,8 @@ body{
 /* Style de base */
 .mid_part {
     position: relative;
-    margin-top: 2.5em;
-    min-height: 270px;
+    margin-top: 1.5em;
+    min-height: auto;
     width: 85%;
     z-index: 10;
     display: flex;
@@ -125,6 +125,7 @@ body{
 .description .author_desc {
     word-break: break-word;
     display: flex;
+	font-size: 15px;
     text-align: justify;
 	justify-content: center;
 	width: 100%;
@@ -143,13 +144,15 @@ body{
 .description #sub-title{
 	font-size: 20px;
     display: flex;
+	color: #FF8400;
+    font-weight: bold;
     text-align: justify;
-	justify-content: center;
+	justify-content: start;
 	width: 100%;
 }
 
 .description .buttons {
-    margin-top: 25px;
+    margin-top: 20px;
     display: flex;
     flex-wrap: wrap; /* Permet aux boutons de passer sur plusieurs lignes si nécessaire */
     justify-content: center;
@@ -180,7 +183,7 @@ body{
 /* Section achat */
 .bay-section {
 	width: 85%;
-    margin-top: 20px;
+    margin-top: 10px;
 	text-align: center;
 }
 
@@ -204,9 +207,8 @@ body{
 #donation {
 	width: 100%;
     padding: 10px 20px;
-	margin-top: 10px;
 	font-size: 17px;
-	background: #ff0066;
+	background: #B6101C;
 	align-items: center;
 	border: 1px solid rgba(131, 131, 139, 0.578);
     color: white;
