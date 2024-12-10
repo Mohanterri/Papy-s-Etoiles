@@ -624,6 +624,7 @@ body{
 	height: 180px;
 	border-radius: 2px;
 	border: 1px solid rgba(255,255,255,0.3);
+	cursor: pointer;
 }
 .artist:before{
 	content: '';
