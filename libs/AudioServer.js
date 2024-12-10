@@ -1,9 +1,7 @@
-'use server'
-
 import http from 'http';
 import fs from 'fs';
 
-const server = http.createServer((req, res) => {
+const audioServer = http.createServer((req, res) => {
     const url = new URL(req.url, `http://${req.headers.host}`);
     const id = url.pathname.slice(1); // Récupérer l'id de l'URL
 
@@ -28,6 +26,6 @@ const server = http.createServer((req, res) => {
     res.end();
 });
 
-server.listen(80, () => {
-    console.log('Server listening on port 80');
+audioServer.listen(3633, () =>{
+    console.log("Server started");
 });

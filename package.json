@@ -4,10 +4,10 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "dev": "npm run client",
     "client": "vite",
-    "build": "concurrently \"vite build\" \"npm run client\"",
-    "server": "node libs/AudioServer.js",
+    "build": "vite build",
+    "start": "node libs/AudioServer.js",
     "lint": "eslint .",
     "preview": "vite preview",
     "build-sw": "workbox generateSW workbox-config.cjs"
