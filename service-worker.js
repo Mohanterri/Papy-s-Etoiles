@@ -4,7 +4,7 @@ import { precacheAndRoute } from 'workbox-precaching';
 import { registerRoute } from 'workbox-routing';
 import { StaleWhileRevalidate } from 'workbox-strategies';
 
-const CACHE_NAME = "app-papys-v5";
+const CACHE_NAME = "app-papys-v6";
 let refreshing;
 
 // Précache les ressources définies par Workbox

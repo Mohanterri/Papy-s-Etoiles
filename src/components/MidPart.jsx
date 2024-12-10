@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import Popup from './modal';
+import 'boxicons'
 
 const MidPart = () => {
   // Date cible pour le compte à rebours (exemple : 31 décembre 2024 à 23:59:59)
@@ -87,6 +88,7 @@ const MidPart = () => {
           <div className="countdown">
             {countdownText === "Précommander" && (
               <>
+                <h1>Date : 22 Jan 2025</h1>
                 <h2>
                   Disponible dans :
                 </h2>
@@ -95,6 +97,12 @@ const MidPart = () => {
             )}
           </div>
           <br></br>
+          
+          <button id="donation">
+              <i className="bx bxs-donate-heart"></i>
+               Fire un don
+          </button>
+          
           <button id="bay_album" onClick={openModal}>
             <i className="bx bxs-cart-add"></i> {countdownText}
           </button>

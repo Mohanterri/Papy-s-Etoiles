@@ -40,13 +40,12 @@ function TopTracks() {
                         <p>{track.title}</p>
                         <p>{track.artist}</p>
                         <p id="total_download">
-                            <i className="bx bx-download"></i>&nbsp;&nbsp;{track.downloads}+
+                            <i className="bx bx-headphone"></i>&nbsp;&nbsp;{track.downloads}+
                         </p>
                         {track.isNew && <p id="message">New</p>}
                     </div>
                     <div id="actions_2">
                         <p><a href="#"><i className='bx bx-share' ></i></a></p>
-                        <p><a href={track.src} download><i className="bx bx-download"></i></a></p>
                     </div>
                 </div>
             ))}

@@ -181,11 +181,13 @@ body{
 .bay-section {
 	width: 85%;
     margin-top: 20px;
+	text-align: center;
 }
 
 #bay_album {
 	width: 100%;
     padding: 10px 20px;
+	margin-top: 10px;
 	font-size: 17px;
 	background: #FF8400;
 	border: 1px solid rgba(131, 131, 139, 0.578);
@@ -195,6 +197,24 @@ body{
 }
 
 #bay_album:hover{
+	color: #ffffff;
+	opacity: 0.6;
+}
+
+#donation {
+	width: 100%;
+    padding: 10px 20px;
+	margin-top: 10px;
+	font-size: 17px;
+	background: #ff0066;
+	align-items: center;
+	border: 1px solid rgba(131, 131, 139, 0.578);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#donation:hover{
 	color: #ffffff;
 	opacity: 0.6;
 }
