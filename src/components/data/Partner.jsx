@@ -35,6 +35,18 @@ const Partners = [
       img: "partners/kilishi-origine.png",
       link: "https://www.facebook.com/kilishidoriginebysarki"
     },
+    {
+      id: 7,
+      name: "One Shop",
+      img: "partners/one-shop.jpg",
+      link: "https://www.facebook.com/profile.php?id=61550790277571"
+    },
+    {
+      id: 8,
+      name: "Studios MANSA",
+      img: "partners/studio-mansa.png",
+      link: "https://www.facebook.com/profile.php?id=100091396805016"
+    },
 ];
 
 export default Partners;

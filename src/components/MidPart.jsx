@@ -1,47 +1,17 @@
 import { useState, useEffect } from 'react';
-import Swal from 'sweetalert2'
-import Popup from './modal';
+import Swal from 'sweetalert2';
 import 'boxicons'
 
 const MidPart = () => {
   // Date cible pour le compte à rebours (exemple : 31 décembre 2024 à 23:59:59)
   const targetDate = new Date("2025-01-22T23:59:59").getTime();
   const [countdownText, setCountdownText] = useState("Précommander");
-  const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const openModal = () => {
+  const openDonation = () => {
     Swal.fire({
-      title: "Donnations",
-      input: "text",
-      inputAttributes: {
-        autocapitalize: "off",
-        placeholder: "Votre nom"
-      },
-      showCancelButton: true,
-      confirmButtonText: "Valider",
-      showLoaderOnConfirm: true,
-      preConfirm: async (login) => {
-        try {
-          console.log(login);
-        } catch (error) {
-          Swal.showValidationMessage(`Request failed: ${error}`);
-        }
-      },
-      allowOutsideClick: () => !Swal.isLoading()
-    }).then((result) => {
-      if (result.isConfirmed) {
-        Swal.fire({
-          title: `${result.value.login}'s avatar`,
-          imageUrl: result.value.avatar_url
-        });
-      }
+      title:"Titre",
     });
-  };
-
-  const closeModal = () => {
-    console.log("Closing modal");
-    setIsModalOpen(false);
-  };
+  }
   
   const [countdown, setCountdown] = useState({
     days: 0,
@@ -86,10 +56,6 @@ const MidPart = () => {
 
   return (
     <>
-      <Popup isOpen={isModalOpen} onClose={closeModal}>
-        <p>This is a reusable modal!</p>
-      </Popup>
-
       <div className="mid_part">
         <img src="/img.jpg" alt="Image" />
 
@@ -123,12 +89,12 @@ const MidPart = () => {
           </div>
           <br></br>
           
-          <button id="donation">
+          <button id="donation" onClick={openDonation}>
               <i className="bx bxs-donate-heart"></i>
                Fire un don
           </button>
           
-          <button id="bay_album" onClick={openModal}>
+          <button id="bay_album">
             <i className="bx bxs-cart-add"></i> {countdownText}
           </button>
         </div>

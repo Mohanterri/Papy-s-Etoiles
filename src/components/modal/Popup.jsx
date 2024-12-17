@@ -1,30 +1,11 @@
-import "./Popup.css";
+import Donation from "../templates/Donation";
 
-const Popup = ( isOpen, onClose, children ) => {
-  if (!isOpen) return null;
-
-  const handleOutsideClick = (event) => {
-    if (event.target.id === "mModal") {
-      console.log("Click outside detected");
-      onClose();
-    }
-  };
-
+const Popup = ( type ) => {
+  
   return (
-    <div id="myModal" className="modal" onClick={handleOutsideClick}>
-      <div className="modal-content">
-        <span
-          className="close"
-          onClick={() => {
-            console.log("Close button clicked");
-            onClose();
-          }}
-        >
-          &times;
-        </span>
-        {children}
-      </div>
-    </div>
+    <>
+      <Donation />
+    </>
   );
 };
 

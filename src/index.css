@@ -337,7 +337,7 @@ body{
 	margin: 10px 0;
 }
 .side_menu li:hover{
-	background:  #E91E63;
+	background:  #B6101C;
 }
 .side_menu li i{
 	color: #fff;
@@ -405,7 +405,7 @@ body{
 	margin-left: 10px;
 }
 #actions i:hover{
-	color: #E91E63;
+	color: #B6101C;
 }
 /*song description part*/
 #song_desc{
@@ -417,13 +417,13 @@ body{
 	position: absolute;
 	bottom: 5px;
 	right: 2.5em;
-	color: #EC407A;
+	color: #B6101C;
 }
 #song_desc #total_download{
 	position: absolute;
 	bottom: 10px;
 	right: 22%;
-	color: #EC407A;
+	color: #B6101C;
 }
 #song_desc p:nth-child(1){
 	text-transform: capitalize;
@@ -464,7 +464,7 @@ body{
   top: 0;
   left: 0;
   height: 4px;
-  background: linear-gradient(to right, #cc33ff 0%, #ff0066 100%);
+  background: linear-gradient(to right, #FF8400 0%, #B6101C 100%);
   width: 0%;
   z-index: 100;
 }
@@ -532,7 +532,7 @@ body{
     width: 7px;
 }
 ::-webkit-scrollbar-thumb {
-	background: linear-gradient(to right ,transparent, #EC407A);
+	background: linear-gradient(to right ,transparent, #B6101C);
 	border-radius: 5px;
 }
 

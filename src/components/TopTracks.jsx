@@ -1,13 +1,9 @@
 import { useState } from "react";
-//import { useAudiosManagement } from '../models/Audios'
 import tracks from "./data/Tracks";
 
 function TopTracks() {
 
     const [activeTrack, setActiveTrack] = useState(null);
-    //const { data: tracks } = useAudiosManagement();
-
-    // Gestion de la lecture/pause
     const togglePlayPause = (track) => {
         if (activeTrack?.id === track.id) {
         activeTrack.audio.pause();
@@ -24,8 +20,6 @@ function TopTracks() {
     return (
         <div className="top_tracks" id="top_tracks">
             <p id="heading"><i className='bx bxs-playlist'></i>&nbsp;&nbsp;Playlist</p>
-            <div id="track"></div>
-            
             {tracks.map((track) => (
                 <div key={track.id} id="track">
                     <img src={track.img} alt={track.title} />
