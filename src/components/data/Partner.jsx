@@ -53,6 +53,12 @@ const Partners = [
       img: "partners/studio-mansa.png",
       link: "https://www.facebook.com/profile.php?id=100091396805016"
     },
+    {
+      id: 10,
+      name: "habaru-info.png",
+      img: "partners/studio-mansa.png",
+      link: "https://habaru.info/"
+    },
 ];
 
 export default Partners;
