@@ -55,8 +55,8 @@ const Partners = [
     },
     {
       id: 10,
-      name: "habaru-info.png",
-      img: "partners/studio-mansa.png",
+      name: "Habaru Info",
+      img: "partners/habaru-info.png",
       link: "https://habaru.info/"
     },
 ];
