@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import { useState, useEffect } from "react";
+import { liens } from "./data/Liens";
 import "boxicons";
 
 const MidPart = ({ openModal }) => {
@@ -11,6 +12,11 @@ const MidPart = ({ openModal }) => {
     minutes: 0,
     seconds: 0,
   });
+
+  const openUrl = (link) =>{
+		const newWindow = window.open(link, '_blank', 'noopener,noreferrer')
+  		if (newWindow) newWindow.opener = null
+	}
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -76,11 +82,13 @@ const MidPart = ({ openModal }) => {
         </div>
         <br />
 
-        <button id="donation" onClick={openModal}>
+        <button id="donation" onClick={()=>openUrl(liens[0].donnation)}>
           <i className="bx bxs-donate-heart"></i> Faire un don
         </button>
 
-        <button id="bay_album">
+        <button id="bay_album" onClick={()=> {
+          openUrl(`${countdownText}` === "Précommander" ? liens[0].prevante : liens[0].achat)
+        }}>
           <i className="bx bxs-cart-add"></i> {countdownText}
         </button>
       </div>

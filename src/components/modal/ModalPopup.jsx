@@ -1,73 +1,63 @@
 // ModalPopup.jsx
-import React, { useRef } from "react";
-import { gsap } from "gsap";
-import "./ModalPopup.css";
+import React, { useState, useEffect } from 'react';
+import {
+  Dialog,
+  DialogTitle,
+  DialogContent,
+  DialogActions,
+  TextField,
+  Button,
+  MenuItem,
+  Select,
+  InputLabel,
+  FormControl,
+} from '@mui/material';
 
-const ModalPopup = ( isModalOpen, closeModal, handleSubmit ) => {
-  const modalRef = useRef(null);
+const ModalPopup = ( { mode, open, onClose, onSubmit } ) => {
 
-  // Animation d'entrée pour le modal
-  React.useEffect(() => {
-    if (isModalOpen) {
-      gsap.fromTo(
-        modalRef.current,
-        { opacity: 0, scale: 0.8 },
-        { opacity: 1, scale: 1, duration: 0.5, ease: "power3.out" }
-      );
-    }
-  }, [isModalOpen]);
+  const [editedDocument, setEditedDocument] = useState({
+    type: '',
+    name: '',
+    phone: '',
+  });
 
-  // Animation de sortie pour le modal
-  const handleClose = () => {
-    gsap.to(modalRef.current, {
-      opacity: 0,
-      scale: 0.8,
-      duration: 0.3,
-      ease: "power3.in",
-      onComplete: closeModal,
-    });
+  const handleSubmit = () => {
+    onSubmit(editedDocument);
   };
 
-  if (!isModalOpen) return null;
-
   return (
-    <div className="overlay">
-      <div ref={modalRef} className="modal">
-        <h2 className="title">Formulaire</h2>
-        <form onSubmit={handleSubmit}>
-          <input
-            type="text"
-            placeholder="Champ 1"
-            className="input"
-            required
-          />
-          <input
-            type="text"
-            placeholder="Champ 2"
-            className="input"
-            required
-          />
-          <input
-            type="text"
-            placeholder="Champ 3"
-            className="input"
-            required
-          />
-          <div className="button-group">
-            <button type="submit" className="validate-button">
-              Valider
-            </button>
-            <button
-              type="button"
-              onClick={handleClose}
-              className="cancel-button"
-            >
-              Annuler
-            </button>
-          </div>
-        </form>
-      </div>
-    </div>
+    <Dialog open={open} onClose={onClose}>
+      <DialogTitle>{mode === 'donation' ? 'Faire un don' : mode === 'Précommander' ? 'Précommander l\'album' : 'Achat de l\'album'}</DialogTitle>
+      <DialogContent>
+      <FormControl fullWidth>
+          <InputLabel>Type</InputLabel>
+          <Select
+            value={editedDocument.type}
+            onChange={(e) => setEditedDocument({ ...editedDocument, type: e.target.value })}
+          >
+            <MenuItem value="usb">Clé USB</MenuItem>
+            <MenuItem value="cd">Disque CD</MenuItem>
+            <MenuItem value="cm">Carte mémoire</MenuItem>
+          </Select>
+        </FormControl>
+        <TextField
+          label="Votre nome"
+          value={editedDocument.name}
+          onChange={(e) => setEditedDocument({ ...editedDocument, name: e.target.value })}
+          fullWidth
+        />
+        <TextField
+          label="Votre téléphone"
+          value={editedDocument.phone}
+          onChange={(e) => setEditedDocument({ ...editedDocument, phone: e.target.value })}
+          fullWidth
+        />
+      </DialogContent>
+      <DialogActions>
+        <Button onClick={onClose}>Annuler</Button>
+        <Button onClick={handleSubmit} color="primary">Valider</Button>
+      </DialogActions>
+    </Dialog>
   );
 };
 

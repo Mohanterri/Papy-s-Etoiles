@@ -9,9 +9,11 @@ import Contact from "../components/Contact";
 import ModalPopup from "../components/modal/ModalPopup";
 
 function Home() {
+  const [mode, setMode] = useState("");
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const openModal = () => {
+  const openModal = (mode) => {
+    setMode(mode);
     setIsModalOpen(true);
   };
 
@@ -26,9 +28,12 @@ function Home() {
 
   return (
     <>
-      {isModalOpen && (
-        <ModalPopup onClose={closeModal} onSubmit={handleSubmit} />
-      )}
+      <ModalPopup
+        mode={mode}
+        open={isModalOpen}
+        onClose={closeModal} 
+        onSubmit={handleSubmit} 
+      />
 
       <MidPart openModal={openModal} />
       <TopTracks />
