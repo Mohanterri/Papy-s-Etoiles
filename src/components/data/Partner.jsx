@@ -2,8 +2,8 @@ const Partners = [
     {
       id: 1,
       name: "Alliance Française",
-      img: "partners/alliance.png",
-      ling: "https://www.facebook.com/AFGAROUA"
+      img: "partners/alliance.jpg",
+      link: "https://www.facebook.com/AFGAROUA?mibextid=ZbWKwL"
     },
     {
       id: 2,
